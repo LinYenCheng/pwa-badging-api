@@ -26,8 +26,8 @@
         "sizes": "512x512",
         "type": "image/png"
       }],
-    "scope": "/",
-    "start_url": "/pwa-badging-api",
+    "scope": "/pwa-badging-api",
+    "start_url": "/pwa-badging-api/index.html",
     "display": "standalone",
     "background_color": "#e8eaf6",
     "theme_color": "#3f51b5"
