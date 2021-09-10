@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#3f51b5">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <script>
       // Redirect to HTTPS if HTTP is requested.
       if (window.location.protocol === 'http:') {
@@ -22,40 +22,38 @@
     
 
     <p id="notSupported">
-      <b>Sorry!</b> This browser doesn't appear to support the badging API.
+      瀏覽器不支援 badging API.
     </p>
 
     <p id="requiresStandalone">
-      <b>Note:</b> In order for this demo to work, it must be an installed
-      Progressive Web App.
+      需要安裝後才可以使用
       <br><br>
       <button id="butInstall" type="button" disabled>
-        Install
+        點我安裝
       </button>
     </p>
     
     <h3>
-      Set app badge in page
+      設定 badge 數字通知
     </h3>
     <div id="demoControls">
       <label for="badgeVal">Badge value</label>
       <input type="number" id="badgeVal" placeholder="<number>" min="0" value="42" disabled />
       <br>
       <button id="butSet" type="button" disabled>
-        Set
+        設定
       </button>
       <button id="butClear" type="button" disabled>
-        Clear
+        歸零
       </button>
     </div>
 
     <h3>
-      Set app badge in background (via service worker)
+      透過 service worker 背景設定
     </h3>
     <div>
       <p>
-        Increment the badge value by opening another window to this page, or
-        clicking the  <b>Make XHR</b> button.
+        點選  <b>Make XHR</b> 按鈕
       </p>
       <button id="butMakeXHR" type="button" disabled>
         Make XHR
