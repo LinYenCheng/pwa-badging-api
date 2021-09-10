@@ -23,8 +23,8 @@ if ('setAppBadge' in navigator) {
 // Update the UI to indicate whether the API is supported.
 function isSupported(kind) {
   console.log('supported', kind);
-  const divNotSupported = document.getElementById('notSupported');
-  divNotSupported.classList.toggle('hidden', true);
+  // const divNotSupported = document.getElementById('notSupported');
+  // divNotSupported.classList.toggle('hidden', true);
   butSet.removeAttribute('disabled');
   butClear.removeAttribute('disabled');
   inputBadgeVal.removeAttribute('disabled');  
