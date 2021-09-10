@@ -48,7 +48,7 @@ butClear.addEventListener('click', () => {
 });
 
 butMakeXHR.addEventListener('click', () => {
-  fetch('manifest.json');
+  fetch('./manifest.json');
 });
 
 // Wrapper to support first and second origin trial
