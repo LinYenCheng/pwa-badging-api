@@ -27,7 +27,7 @@
         "type": "image/png"
       }],
     "scope": "/",
-    "start_url": "/",
+    "start_url": "/pwa-badging-api",
     "display": "standalone",
     "background_color": "#e8eaf6",
     "theme_color": "#3f51b5"
