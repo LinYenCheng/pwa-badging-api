@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Badging API Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3f51b5">
+    <link rel="manifest" href="/manifest.json">
+    <script>
+      // Redirect to HTTPS if HTTP is requested.
+      if (window.location.protocol === 'http:') {
+        window.location.href = 'https:' + window.location.href.substring(5);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>
+      App Badging API Demo
+    </h1>
+    
+
+    <p id="notSupported">
+      <b>Sorry!</b> This browser doesn't appear to support the badging API.
+    </p>
+
+    <p id="requiresStandalone">
+      <b>Note:</b> In order for this demo to work, it must be an installed
+      Progressive Web App.
+      <br><br>
+      <button id="butInstall" type="button" disabled>
+        Install
+      </button>
+    </p>
+    
+    <h3>
+      Set app badge in page
+    </h3>
+    <div id="demoControls">
+      <label for="badgeVal">Badge value</label>
+      <input type="number" id="badgeVal" placeholder="<number>" min="0" value="42" disabled />
+      <br>
+      <button id="butSet" type="button" disabled>
+        Set
+      </button>
+      <button id="butClear" type="button" disabled>
+        Clear
+      </button>
+    </div>
+
+    <h3>
+      Set app badge in background (via service worker)
+    </h3>
+    <div>
+      <p>
+        Increment the badge value by opening another window to this page, or
+        clicking the  <b>Make XHR</b> button.
+      </p>
+      <button id="butMakeXHR" type="button" disabled>
+        Make XHR
+      </button>
+    </div>
+    
+    
+    <script src="./common.js"></script>
+    <script src="./demo.js"></script>
+
+  </body>
+</html>
