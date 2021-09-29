@@ -76,7 +76,7 @@ function clearBadge() {
   }
 }
 
-function findRelatedAppsApp() {
+async function findRelatedAppsApp() {
   const relatedApps = await navigator.getInstalledRelatedApps();
   relatedApps.forEach((app) => {
     alert(`${app.id}${app.platform}${app.url}`);
