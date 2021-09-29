@@ -1,6 +1,7 @@
 let otVersion = false;
 const butSet = document.getElementById('butSet');
 const butClear = document.getElementById('butClear');
+const butRelatedApps = document.getElementById('butRelatedApps');
 const inputBadgeVal = document.getElementById('badgeVal');
 
 const butMakeXHR = document.getElementById('butMakeXHR');
@@ -74,3 +75,15 @@ function clearBadge() {
     window.ExperimentalBadge.clear();
   }
 }
+
+function findRelatedAppsApp() {
+  const relatedApps = await navigator.getInstalledRelatedApps();
+  relatedApps.forEach((app) => {
+    alert(`${app.id}${app.platform}${app.url}`);
+    console.log(app.id, app.platform, app.url);
+  });
+}
+
+butRelatedApps.addEventListener('click', () => {
+  findRelatedAppsApp();
+});
